@@ -27,10 +27,13 @@
   ],
   "dependencies": {
     "@commitlint/core": "^4.2.2",
+    "body-parser": "^1.18.2",
     "mock-mongo": "^0.2.1",
     "mongo-mock": "^2.8.0",
     "mongodb": "^3.0.0-rc0",
-    "probot": "^3.0.0"
+    "probot": "^4.0.0",
+    "strip-ansi": "^4.0.0",
+    "strip-indent": "^2.0.0"
   },
   "devDependencies": {
     "clipboardy": "^1.2.2",
