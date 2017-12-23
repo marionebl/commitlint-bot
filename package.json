@@ -1,31 +1,51 @@
 {
-	"name": "commitlint-bot",
-	"version": "0.0.0-development",
-	"description": "A GitHub App that runs commitlint for you",
-	"author": "Ahmed T. Ali <ah.tajelsir@gmail.com> (https://ahmed.sd)",
-	"license": "MIT",
-	"repository": "https://github.com/ahmed-taj/commitlint-bot.git",
-	"keywords": ["validate", "commit", "pr", "conventional", "git", "probot-app"],
-	"main": "index.js",
-	"scripts": {
-		"start": "probot run ./index.js",
-		"test": "mocha",
-		"semantic-release":
-			"semantic-release pre && npm publish && semantic-release post"
-	},
-	"files": ["lib", "index.js", "README.md"],
-	"dependencies": {
-		"@commitlint/core": "^4.2.2",
-		"probot": "^3.0.0"
-	},
-	"devDependencies": {
-		"expect": "^1.20.2",
-		"localtunnel": "^1.8.2",
-		"mocha": "^3.2.0",
-		"semantic-release": "^8.2.0"
-	},
-	"engines": {
-		"node": "8.9.x",
-		"npm": "5.5.x"
-	}
+  "name": "commitlint-bot",
+  "version": "0.0.0-development",
+  "description": "A GitHub App that runs commitlint for you",
+  "author": "Ahmed T. Ali <ah.tajelsir@gmail.com> (https://ahmed.sd)",
+  "license": "MIT",
+  "repository": "https://github.com/ahmed-taj/commitlint-bot.git",
+  "keywords": [
+    "validate",
+    "commit",
+    "pr",
+    "conventional",
+    "git",
+    "probot-app"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "deploy": "node deploy.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "start": "probot run ./index.js",
+    "test": "mocha"
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "README.md"
+  ],
+  "dependencies": {
+    "@commitlint/core": "^4.2.2",
+    "mock-mongo": "^0.2.1",
+    "mongo-mock": "^2.8.0",
+    "mongodb": "^3.0.0-rc0",
+    "probot": "^3.0.0"
+  },
+  "devDependencies": {
+    "clipboardy": "^1.2.2",
+    "execa": "^0.8.0",
+    "expect": "^1.20.2",
+    "github-slug": "^2.0.0",
+    "jest": "^22.0.4",
+    "jest-cli": "^22.0.4",
+    "localtunnel": "^1.8.2",
+    "mocha": "^3.2.0",
+    "now": "^8.5.4",
+    "semantic-release": "^8.2.0"
+  },
+  "engines": {
+    "node": "8.9.x",
+    "npm": "5.5.x"
+  }
 }

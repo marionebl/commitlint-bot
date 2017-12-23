@@ -61,3 +61,7 @@ typings/
 
 # Git To-Dos 
 .todos.yml
+
+*.pem
+
+.mongo.js

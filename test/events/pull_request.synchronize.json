@@ -12,6 +12,11 @@
 				"user": {
 					"login": "user"
 				}
+			},
+			"base": {
+				"repo": {
+					"full_name": "user/repo"
+				}
 			}
 		},
 		"repository": {

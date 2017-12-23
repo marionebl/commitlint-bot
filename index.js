@@ -1,9 +1,10 @@
-// Ours
-const commitlint = require('./lib/lint')
+const createDatabase = require('./lib/db');
+const schedule = require('./lib/schedule')
 
-module.exports = robot => {
-	// For more information on building apps:
-	// https://probot.github.io/docs/
-	robot.on('pull_request.opened', commitlint)
-	robot.on('pull_request.synchronize', commitlint)
+module.exports = (robot, createDb = createDatabase) => {
+	const db = createDb()
+
+	robot.on('pull_request.opened', bot => schedule(bot, db))
+	robot.on('pull_request.synchronize', bot => schedule(bot, db))
+	robot.on('pull_request.edited', bot => schedule(bot, db))
 }
