@@ -10,6 +10,7 @@ module.exports = (robot, createDb = createDatabase) => {
 
 	// Schedule new lint tasks awaiting config
 	robot.on('pull_request.opened', bot => schedule(bot, db))
+	robot.on('pull_request.reopened', bot => schedule(bot, db))
 	robot.on('pull_request.synchronize', bot => schedule(bot, db))
 
 	// Provide endpoint to receive commitlint config
